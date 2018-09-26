@@ -10,7 +10,13 @@
     </Group>
   </Group>
   <Data key="DataVersionKey" value="2" />
-  <Group key="DWRInstGuidMapping" />
+  <Group key="DWRInstGuidMapping">
+    <Group key="Pin">
+      <Data key="2ef0647b-8f3b-406a-aa47-e35bdf8007b0" value="PIN_BLUE" />
+      <Data key="d170d478-97ea-45e8-9918-989f5b48cdae" value="PIN_GREEN" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="PIN_RED" />
+    </Group>
+  </Group>
   <Group key="FlashSecurity">
     <Group key="RowsKey">
       <Group key="0">
@@ -3546,12 +3552,29 @@
       </Group>
     </Group>
   </Group>
+  <Group key="Pin2">
+    <Group key="2ef0647b-8f3b-406a-aa47-e35bdf8007b0">
+      <Group key="0">
+        <Data key="Port Format" value="3,7" />
+      </Group>
+    </Group>
+    <Group key="d170d478-97ea-45e8-9918-989f5b48cdae">
+      <Group key="0">
+        <Data key="Port Format" value="3,6" />
+      </Group>
+    </Group>
+    <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
+      <Group key="0">
+        <Data key="Port Format" value="2,6" />
+      </Group>
+    </Group>
+  </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />
   </Group>
   <Group key="System3">
     <Data key="CYDEV_CONFIG_UNUSED_IO" value="Disallowed" />
-    <Data key="CYDEV_CONFIGURATION_MODE" value="COMPRESSED" />
+    <Data key="CYDEV_CONFIGURATION_MODE" value="UNCOMPRESSED" />
     <Data key="CYDEV_DEBUG_PROTECT" value="OPEN" />
     <Data key="CYDEV_DEBUGGING_DPS" value="SWD" />
     <Data key="CYDEV_HEAP_SIZE" value="0x80" />
