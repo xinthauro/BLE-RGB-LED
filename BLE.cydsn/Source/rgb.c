@@ -1,18 +1,23 @@
+/*******************************************************************************
+* rgb.c
+* Last updapted 2018-09-27
+*
+* Carlos Silva
+*******************************************************************************/
 #include <rgb.h>
 
 /* Local-scope ---------------------------------------------------------------*/
 #define RGB_START_VALUE 0u
 
 static RGBValue const rgbStartValue = {
-    . red = RGB_START_VALUE,
-    . green = RGB_START_VALUE,
-    . blue = RGB_START_VALUE
+    .red = RGB_START_VALUE,
+    .green = RGB_START_VALUE,
+    .blue = RGB_START_VALUE
 };
 
 /*............................................................................*/
 void RGB_start(void)
 {
-    RGBValue value;
     /* Initializes and start PWM channels */
     PWM_RED_Start();
     PWM_GREEN_Start();

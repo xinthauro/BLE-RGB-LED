@@ -1,5 +1,12 @@
+/*******************************************************************************
+* main.c
+* Last updapted 2018-09-27
+*
+* Carlos Silva
+*******************************************************************************/
 #include <project.h>
 #include <rgbs.h>
+#include <dis.h>
 
 /* Local-scope ---------------------------------------------------------------*/
 static void bleStart(void);
@@ -9,11 +16,11 @@ static void bleStackCallback(uint32 eventCode, void *eventParameter);
 /*............................................................................*/
 int main(void)
 {
+    /* Enable global interrupts */
     CyGlobalIntEnable;
-
+    /* Initializes BLE Stack */
     CyBle_Start(bleStackCallback);
     CyBle_ProcessEvents();
-
     for (;;) {
         CyBle_ProcessEvents();
     }
@@ -22,6 +29,7 @@ int main(void)
 static void bleStart(void)
 {
     RGBS_start();
+    DIS_start();
 }
 /*............................................................................*/
 static void bleDisconnected(void)

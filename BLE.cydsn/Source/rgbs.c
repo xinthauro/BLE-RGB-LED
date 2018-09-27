@@ -1,3 +1,9 @@
+/*******************************************************************************
+* rgbs.c
+* Last updapted 2018-09-27
+*
+* Carlos Silva
+*******************************************************************************/
 #include <rgbs.h>
 #include <rgb.h>
 
@@ -15,8 +21,8 @@ void RGBS_start(void)
 /*............................................................................*/
 void RGBS_valueWriteRequest(CYBLE_GATTS_WRITE_REQ_PARAM_T *wrParameter)
 {
-    if (wrParameter->handleValPair.value.len == 3u) {
-        /* Write to RGB led received value */
+    if (wrParameter->handleValPair.value.len == RGB_VALUE_LENGHT) {
+        /* Write received value to RGB LED */
         RGBValue value;
         value.red = wrParameter->handleValPair.value.val[RGB_CHANNEL_RED];
         value.green = wrParameter->handleValPair.value.val[RGB_CHANNEL_GREEN];
