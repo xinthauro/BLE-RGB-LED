@@ -1,5 +1,7 @@
 #include <project.h>
+#include <rgb.h>
 
+/*............................................................................*/
 int main(void)
 {
     CyGlobalIntEnable;
@@ -8,19 +10,12 @@ int main(void)
     uint8 g = 63;
     uint8 r = 127;
 
-    PWM_BLUE_Start();
-    PWM_GREEN_Start();
-    PWM_RED_Start();
-
-    PWM_BLUE_WriteCompare(0);
-    PWM_GREEN_WriteCompare(0);
-    PWM_RED_WriteCompare(0);
+    RGB_start();
+    RGB_write(r, g, b);
 
     for (;;) {
         for (int i = 0; i < 255; ++i) {
-            PWM_BLUE_WriteCompare(b++);
-            PWM_GREEN_WriteCompare(g++);
-            PWM_RED_WriteCompare(r++);
+            RGB_write(r++, g++, b++);
             CyDelay(5);
         }
     }
