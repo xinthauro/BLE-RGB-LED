@@ -1,6 +1,6 @@
 /*******************************************************************************
 * dis.c
-* Last updapted 2018-09-27
+* Last updapted 2018-09-28
 *
 * Carlos Silva
 *******************************************************************************/
@@ -40,7 +40,7 @@ static void setSerialNumber(void)
     uint32 id[2];
     
     CyGetUniqueId(id);
-    snprintf(dummy, sizeof(dummy), "%.4X:%.4X:%.4X:%.4X", (uint16_t)(id[1] >> 8), (uint16_t)id[1], (uint16_t)(id[0] >> 8), (uint16_t)id[0]);
+    snprintf(dummy, sizeof(dummy), "%.4X:%.4X:%.4X:%.4X", (uint16)(id[1] >> 8), (uint16)id[1], (uint16)(id[0] >> 8), (uint16)id[0]);
     CyBle_DissSetCharacteristicValue(CYBLE_DIS_SERIAL_NUMBER, strlen(dummy), (uint8 *)dummy);
 }
 /*............................................................................*/

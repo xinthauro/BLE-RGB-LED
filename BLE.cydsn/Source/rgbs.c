@@ -27,6 +27,7 @@ void RGBS_valueWriteRequest(CYBLE_GATTS_WRITE_REQ_PARAM_T *wrParameter)
         value.red = wrParameter->handleValPair.value.val[RGB_CHANNEL_RED];
         value.green = wrParameter->handleValPair.value.val[RGB_CHANNEL_GREEN];
         value.blue = wrParameter->handleValPair.value.val[RGB_CHANNEL_BLUE];
+        RGB_setBreathe(RGB_BREATHE_NOT);
         RGB_write(&value);
         /* Update GATT DB with lastest request */
         CyBle_GattsWriteAttributeValue(&wrParameter->handleValPair, 0u, &wrParameter->connHandle, CYBLE_GATT_DB_PEER_INITIATED);
