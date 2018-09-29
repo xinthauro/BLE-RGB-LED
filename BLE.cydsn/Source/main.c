@@ -23,7 +23,7 @@ int main(void)
     CyBle_Start(bleStackCallback);
     CyBle_ProcessEvents();
     /* RGB_process is called every 7.8ms */
-    CySysWdtSetInterruptCallback(CY_SYS_WDT_COUNTER0, RGB_process);
+    CySysWdtSetInterruptCallback(CY_SYS_WDT_COUNTER2, RGB_process);
     for (;;) {
         CyBle_ProcessEvents();
     }
