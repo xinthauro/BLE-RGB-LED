@@ -18,3 +18,6 @@ The server has the following services:
     * Serial Number String
     * Hardware Revision String
     * Firmware Revision String
+
+You can watch a [demo video](https://youtu.be/tJKZ75ehog4 "BLE-RGB-LED demo") at YouTube.
+
